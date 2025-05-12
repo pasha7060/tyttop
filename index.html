@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Just a moment...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -29,13 +30,13 @@
 </head>
 <body>
   <div class="hint" id="message" style="display: none;">
-    ⚠️ Tap <b>⋮</b> or <b>Aa</b> at the top<br>and select <b>"Open in browser"</b>
+    Tap <b>⋮</b> or <b>Aa</b> at the top<br>and select <b>"Open in browser"</b>
   </div>
 
   <script>
     const redirectURL = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
     const ua = navigator.userAgent.toLowerCase();
-    const isBlocked = /instagram|fbav|tiktok|webview|vk|okhttp|line|micromessenger|telegram/.test(ua);
+    const isBlocked = /tiktok|instagram|fbav|webview|vk|okhttp|line|micromessenger|telegram/.test(ua);
 
     if (isBlocked) {
       document.getElementById("message").style.display = "block";
