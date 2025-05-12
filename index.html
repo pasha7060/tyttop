@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Открытие...</title>
+  <title>Redirecting...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('background.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      font-family: sans-serif;
+      color: white;
       text-align: center;
-      padding: 20px;
     }
     .hint {
       font-size: 20px;
       line-height: 1.5;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 25px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
   <div class="hint" id="message" style="display: none;">
-    👆 Нажми <b>⋮</b> или <b>«Аа»</b> вверху<br>
-    и выбери <b>«Открыть в браузере»</b>
+    ⚠️ Tap <b>⋮</b> or <b>Aa</b> at the top<br>and select <b>"Open in browser"</b>
   </div>
 
   <script>
@@ -36,7 +40,6 @@
     if (isBlocked) {
       document.getElementById("message").style.display = "block";
     } else {
-      // Задержка для подстраховки
       setTimeout(() => {
         window.location.replace(redirectURL);
       }, 300);
