@@ -1,36 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Just a moment...</title>
+  <title>Continue in browser</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: url('background.jpg') no-repeat center center;
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       color: white;
       text-align: center;
     }
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 30px;
+      border-radius: 15px;
+      border: 2px solid white;
+    }
     .hint {
-      font-size: 20px;
-      line-height: 1.5;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 25px;
-      border-radius: 12px;
+      font-size: 22px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
-  <div class="hint" id="message" style="display: none;">
-    Tap <b>⋮</b> or <b>Aa</b> at the top<br>and select <b>"Open in browser"</b>
+  <div class="overlay" id="message" style="display: none;">
+    If you see this message,<br>
+    tap the <b>⋮</b> or <b>Aa</b> at the top<br>
+    and choose <b>"Open in browser"</b> to continue.
   </div>
 
   <script>
@@ -45,6 +49,3 @@
         window.location.replace(redirectURL);
       }, 300);
     }
-  </script>
-</body>
-</html>
