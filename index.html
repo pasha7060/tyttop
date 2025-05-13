@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Just a moment…</title>
+  <meta charset="UTF-8">
+  <title>Внимание</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: sans-serif;
       color: white;
-      font-family: Arial, sans-serif;
       text-align: center;
-      flex-direction: column;
-      backdrop-filter: blur(4px);
     }
-    .notice {
-      background-color: rgba(0, 0, 0, 0.6);
+    .container {
+      background-color: rgba(0,0,0,0.6);
       padding: 20px;
-      border-radius: 12px;
-      max-width: 90%;
+      margin-top: 30%;
     }
-    .open {
-      margin-top: 15px;
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #ff0050;
+      color: white;
+      border: none;
       font-size: 18px;
-      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #e60046;
     }
   </style>
 </head>
 <body>
-  <div class="notice">
-    <p>This page contains external content.</p>
-    <p class="open">Click the three dots in the top right corner and open in browser 🔓</p>
+  <div class="container">
+    <h2>Нажми на <b>⋯</b> в углу и выбери<br>«Открыть в браузере»</h2>
+    <button class="btn" onclick="location.href='https://beacons.ai/tg__gowero77'">Продолжить</button>
   </div>
 </body>
 </html>
