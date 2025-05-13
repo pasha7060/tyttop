@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Continue</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just a moment…</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      font-family: sans-serif;
-      color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
       flex-direction: column;
+      backdrop-filter: blur(4px);
     }
-    .text-box {
-      background-color: rgba(0,0,0,0.6);
+    .notice {
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 12px;
       max-width: 90%;
     }
+    .open {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <div class="text-box">
-    <h2>To continue:</h2>
-    <p>Tap the <strong>three dots</strong> in the top-right corner,<br>then select <strong>“Open in browser”</strong>.</p>
+  <div class="notice">
+    <p>This page contains external content.</p>
+    <p class="open">Click the three dots in the top right corner and open in browser 🔓</p>
   </div>
-
-  <script>
-    setTimeout(() => {
-      if (navigator.userAgent.includes("Chrome") || navigator.userAgent.includes("Safari")) {
-        window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
-      }
-    }, 5000); // редирект через 5 сек — но только если открыто в браузере
-  </script>
 </body>
 </html>
 
