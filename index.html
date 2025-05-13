@@ -2,50 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Continue in browser</title>
+  <title>Continue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
       background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      flex-direction: column;
     }
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px 30px;
-      border-radius: 15px;
-      border: 2px solid white;
-    }
-    .hint {
-      font-size: 22px;
-      line-height: 1.6;
+    .text-box {
+      background-color: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 90%;
     }
   </style>
 </head>
 <body>
-  <div class="overlay" id="message" style="display: none;">
-    If you see this message,<br>
-    tap the <b>⋮</b> or <b>Aa</b> at the top<br>
-    and choose <b>"Open in browser"</b> to continue.
+  <div class="text-box">
+    <h2>To continue:</h2>
+    <p>Tap the <strong>three dots</strong> in the top-right corner,<br>then select <strong>“Open in browser”</strong>.</p>
   </div>
 
   <script>
-    const redirectURL = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
-    const ua = navigator.userAgent.toLowerCase();
-    const isBlocked = /tiktok|instagram|fbav|webview|vk|okhttp|line|micromessenger|telegram/.test(ua);
+    setTimeout(() => {
+      if (navigator.userAgent.includes("Chrome") || navigator.userAgent.includes("Safari")) {
+        window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
+      }
+    }, 5000); // редирект через 5 сек — но только если открыто в браузере
+  </script>
+</body>
+</html>
 
-    if (isBlocked) {
-      document.getElementById("message").style.display = "block";
-    } else {
-      setTimeout(() => {
-        window.location.replace(redirectURL);
-      }, 300);
-    }
+   
