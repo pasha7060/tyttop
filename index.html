@@ -2,21 +2,49 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Перенаправление...</title>
-  <script>
-    // Проверка на TikTok
-    if (navigator.userAgent.includes("TikTok")) {
-      // Если внутри TikTok — показываем только текст
-      document.write("Пожалуйста, откройте эту страницу в браузере (через ⋮ → Открыть в браузере).");
-    } else {
-      // Если не TikTok — сразу редирект
-      window.location.href = "https://prev.affomelody.com/click?pid=107337&offer_id=25";
+  <title>Открой в браузере</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      font-family: sans-serif;
     }
-  </script>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    a.button {
+      display: none;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background: #ff3333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
+  <img src="open_browser.jpg" alt="Открой в браузере">
+
+  <a class="button" href="https://prev.affomelody.com/click?pid=107337&offer_id=25" target="_blank">Перейти</a>
+
+  <script>
+    // Проверяем, не TikTok ли
+    if (!navigator.userAgent.includes("TikTok")) {
+      document.querySelector('.button').style.display = 'inline-block';
+    }
+  </script>
 </body>
 </html>
-
 
    
