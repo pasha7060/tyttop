@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Открой в браузере</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #000;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #fff;
-      font-family: sans-serif;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    a.button {
-      display: none;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background: #ff3333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Открой в браузере</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0.5;}
+  }
+  .text {
+    font-size: 24px;
+    line-height: 1.4;
+    max-width: 300px;
+    user-select: none;
+  }
+</style>
 </head>
 <body>
-  <img src="open_browser.jpg" alt="Открой в браузере">
-
-  <a class="button" href="https://prev.affomelody.com/click?pid=107337&offer_id=25" target="_blank">Перейти</a>
-
-  <script>
-    // Проверяем, не TikTok ли
-    if (!navigator.userAgent.includes("TikTok")) {
-      document.querySelector('.button').style.display = 'inline-block';
-    }
-  </script>
+  <img src="open_browser.jpg" alt="Открой в браузере" />
+  <div class="text">
+    Нажми ⋮ (три точки) в правом верхнем углу <br />
+    и выбери «Открыть в браузере»
+  </div>
 </body>
 </html>
 
